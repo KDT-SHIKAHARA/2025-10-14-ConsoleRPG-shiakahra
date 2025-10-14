@@ -52,9 +52,14 @@ public:
 		auto damage = attack;
 		m_status.hp -= damage;
 
+		//	
+		std::cout << m_status.name << "に " << damage << "の ダメージ！" << std::endl;
+
 		//	死亡判定
 		if (m_status.hp <= 0)
 		{
+			std::cout << m_status.name << "はしぼうした" << std::endl;
+
 			m_isDead = false;
 		}
 	}
@@ -79,6 +84,7 @@ public:
 			return;
 		}
 
+		std::cout <<  m_status.name <<"の回復:" << heal << std::endl;
 		m_status.hp += heal;
 
 	}

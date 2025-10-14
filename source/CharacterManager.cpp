@@ -47,6 +47,7 @@ std::vector<size_t> CharacterManager::GetIndexsForTag(CharacterTag tag)
 
 size_t CharacterManager::CreateEntity(size_t statusID, CharacterTag tag)
 {
+	std::cout << m_defaultStatus.size() << std::endl;
 	auto it = m_defaultStatus.find(statusID);
 	if (it != m_defaultStatus.end())
 	{
@@ -56,6 +57,8 @@ size_t CharacterManager::CreateEntity(size_t statusID, CharacterTag tag)
 		//	ƒRƒŒƒNƒVƒ‡ƒ“‚É’Ç‰Á
 		m_handles.insert({ nextID, std::move(handle) });
 		m_tagIndexs[tag].insert(nextID);
+
+		nextID++;
 	}
 
 
@@ -70,11 +73,16 @@ void CharacterManager::Render()
 	for (auto index : p_indexs)
 	{
 		auto& p = GetHandleForId(index);
-		//	“ü—Í‘Ò‚¿
+		p->Draw();
+	}
 
-
+	//	“G
+	auto e_indexs = GetIndexsForTag(CharacterTag::enemy);
+	for (auto index : e_indexs)
+	{
+		auto& e = GetHandleForId(index);
+		e->Draw();
 	}
 
 
-	//	“G
 }

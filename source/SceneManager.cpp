@@ -8,6 +8,7 @@ void SceneManager::Initialize()
 
 	//	デバック
 	m_currentScene = std::make_unique<InGameScene>();
+	m_currentScene->Initialize();
 }
 
 void SceneManager::Update()

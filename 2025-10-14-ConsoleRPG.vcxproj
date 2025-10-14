@@ -32,6 +32,7 @@
     <ClInclude Include="source\Debug.h" />
     <ClInclude Include="source\GameManager.h" />
     <ClInclude Include="source\InGameScene.h" />
+    <ClInclude Include="source\Input.h" />
     <ClInclude Include="source\ObjectPool.h" />
     <ClInclude Include="source\SceneManager.h" />
     <ClInclude Include="source\Singleton.h" />

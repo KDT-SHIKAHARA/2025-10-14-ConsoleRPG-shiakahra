@@ -89,5 +89,8 @@
     <ClInclude Include="source\CharacterManager.h">
       <Filter>source\Game\Factoty</Filter>
     </ClInclude>
+    <ClInclude Include="source\Input.h">
+      <Filter>source\Utility</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
