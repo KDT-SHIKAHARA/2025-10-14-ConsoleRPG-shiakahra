@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source\Core">
+      <UniqueIdentifier>{fd4767cf-dd1e-49e2-8904-bcfcb3fe09d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Utility">
+      <UniqueIdentifier>{41634ca2-0b66-4a32-b161-bd3fc2008094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Core\GameManager">
+      <UniqueIdentifier>{188b7a90-d250-4c5b-b9ee-3b28f23f0a89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Core\Scene">
+      <UniqueIdentifier>{79fec9f9-4b60-45c6-8c90-cf853427a8fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Game">
+      <UniqueIdentifier>{c3b889ba-7cc8-4670-91bf-464e7103c7d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Game\GameObject">
+      <UniqueIdentifier>{ecee9aed-6e85-4be7-b022-0a33c32f2a81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Game\Status">
+      <UniqueIdentifier>{df5bda7e-74dd-4e64-b5a9-7dbaacd44037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Game\Factoty">
+      <UniqueIdentifier>{35d4492e-b349-472a-aa49-dd2b01e22b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Game\Base">
+      <UniqueIdentifier>{a3dadb91-7b63-414a-b7bc-0909730d5e41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GameManager.cpp">
+      <Filter>source\Core\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="source\SceneManager.cpp">
+      <Filter>source\Core\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\InGameScene.cpp">
+      <Filter>source\Core\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CharacterManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\GameManager.h">
+      <Filter>source\Core\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Singleton.h">
+      <Filter>source\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ObjectPool.h">
+      <Filter>source\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="source\base_Scene.h">
+      <Filter>source\Core\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\SceneManager.h">
+      <Filter>source\Core\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Debug.h">
+      <Filter>source\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="source\TitleScene.h">
+      <Filter>source\Core\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\InGameScene.h">
+      <Filter>source\Core\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\base_Character.h">
+      <Filter>source\Game\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="source\CharacterManager.h">
+      <Filter>source\Game\Factoty</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
