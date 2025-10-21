@@ -25,7 +25,6 @@ void BattleManager::Start()
 
 		std::cout << player->GetName() << std::endl;
 		auto input = Input::GetChar();
-		Input::GetChar();
 
 		switch (input)
 		{

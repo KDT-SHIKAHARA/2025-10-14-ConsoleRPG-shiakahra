@@ -5,9 +5,9 @@ CharacterManager::CharacterManager(size_t pool_capacity, bool pool_allowDynamic)
 	:m_characters(pool_capacity, pool_allowDynamic)
 {
 	m_defaultStatus.emplace(-1, CharacterStatus{});
-	m_defaultStatus.emplace(1, CharacterStatus{ "‚ä‚¤‚µ‚á",100,50,50 });
-	m_defaultStatus.emplace(2, CharacterStatus{ "‚Ç‚ê‚¢",200,20,100 });
-	m_defaultStatus.emplace(3, CharacterStatus{ "ƒhƒ‰ƒSƒ“",500,40 });
+	m_defaultStatus.emplace(1, CharacterStatus{ "‚ä‚¤‚µ‚á",10,50,50 });
+	m_defaultStatus.emplace(2, CharacterStatus{ "‚Ç‚ê‚¢", 20,20,100 });
+	m_defaultStatus.emplace(3, CharacterStatus{ "ƒhƒ‰ƒSƒ“",500,40,100});
 
 }
 

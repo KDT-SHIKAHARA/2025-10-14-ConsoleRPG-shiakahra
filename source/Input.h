@@ -6,7 +6,9 @@ namespace Input
 {
 	inline char GetChar()
 	{
-		return std::cin.get();
+		char tmp;
+		std::cin >> tmp;
+		return tmp;
 	}
 
 	inline std::string GetString()

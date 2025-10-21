@@ -66,6 +66,9 @@
     <ClCompile Include="source\GameOver.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="source\GameClear.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\GameManager.h">
@@ -105,6 +108,9 @@
       <Filter>source\Game\battle</Filter>
     </ClInclude>
     <ClInclude Include="source\GameOver.h">
+      <Filter>source\Core\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GameClear.h">
       <Filter>source\Core\Scene</Filter>
     </ClInclude>
   </ItemGroup>

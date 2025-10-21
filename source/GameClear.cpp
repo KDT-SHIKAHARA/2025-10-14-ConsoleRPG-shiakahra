@@ -1,11 +1,11 @@
-#include "GameOver.h"
+#include "GameClear.h"
+#include<iostream>
 #include"Input.h"
 #include"SceneManager.h"
 #include"InGameScene.h"
-
-void GameOver::Update()
+void GameClear::Update()
 {
-	std::cout << "とうばつ　しっぱい！" << std::endl;
+	std::cout << "とうばつ　かんりょう！" << std::endl;
 	std::cout << "1: リスタート  2: 未定" << std::endl;
 	auto input = Input::GetChar();
 	switch (input)
@@ -16,6 +16,6 @@ void GameOver::Update()
 	}
 }
 
-void GameOver::Render()
+void GameClear::Render()
 {
 }

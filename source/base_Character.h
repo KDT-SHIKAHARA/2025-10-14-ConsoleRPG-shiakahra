@@ -55,13 +55,15 @@ public:
 		{
 			return;
 		}
+		auto hp = m_status.hp;
 
 		//	防御力を追加したらここで計算
 		auto damage = attack;
 		m_status.hp -= damage;
 
 		//	
-		std::cout << m_status.name << "に " << damage << "の ダメージ！" << std::endl;
+		std::cout << m_status.name << "に " << damage << "の ダメージ！" << std::endl
+			<< hp << " -> " << m_status.hp << std::endl;
 
 		//	死亡判定
 		if (m_status.hp <= 0)

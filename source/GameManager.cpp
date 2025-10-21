@@ -42,4 +42,5 @@ void GameManager::Loop()
 void GameManager::Exit()
 {
 	//	解放系、セーブ系
+
 }

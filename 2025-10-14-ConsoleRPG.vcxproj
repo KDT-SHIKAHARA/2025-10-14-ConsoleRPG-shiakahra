@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="source\BattleManager.cpp" />
     <ClCompile Include="source\CharacterManager.cpp" />
+    <ClCompile Include="source\GameClear.cpp" />
     <ClCompile Include="source\GameManager.cpp" />
     <ClCompile Include="source\GameOver.cpp" />
     <ClCompile Include="source\InGameScene.cpp" />
@@ -33,6 +34,7 @@
     <ClInclude Include="source\BattleManager.h" />
     <ClInclude Include="source\CharacterManager.h" />
     <ClInclude Include="source\Debug.h" />
+    <ClInclude Include="source\GameClear.h" />
     <ClInclude Include="source\GameManager.h" />
     <ClInclude Include="source\InGameScene.h" />
     <ClInclude Include="source\Input.h" />
