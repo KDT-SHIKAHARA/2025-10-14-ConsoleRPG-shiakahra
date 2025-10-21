@@ -22,6 +22,10 @@ public:
 	//	構造体のデータ番号からステータス等を初期化メソッドでセットしてコレクションに追加する	
 	size_t CreateEntity(size_t statusID,CharacterTag tag);
 
+	//	タグ検索から有効フラグの立っているオブジェクトだけとってくる
+	std::vector<Character*> GetEnableObjectForTag(CharacterTag tag);
+
+
 	//	全体の描画
 	//	省略してここに書くね
 	void Render();

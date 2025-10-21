@@ -4,13 +4,12 @@
 
 namespace Input
 {
-	char GetChar()
+	inline char GetChar()
 	{
-
 		return std::cin.get();
 	}
 
-	std::string GetString()
+	inline std::string GetString()
 	{
 		std::string input;
 		std::getline(std::cin, input);

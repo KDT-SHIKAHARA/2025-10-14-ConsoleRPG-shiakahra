@@ -28,14 +28,14 @@ void GameManager::Loop()
 	{
 		//	入力
 		//	状態、描画更新
-		SceneManager.Update();
 		SceneManager.Render();
+		SceneManager.Update();
 
 		//	画面切り替え
 		SceneManager.CreateNextScene();
 
 		//	クリア
-		system("cls");
+		//system("cls");
 	}
 }
 

@@ -9,6 +9,7 @@ struct CharacterStatus
 	std::string name ;
 	int hp ;
 	int attack ;
+	int heal;
 	//	必要なら属性も追加
 };
 
@@ -22,6 +23,13 @@ enum class CharacterTag
 	none,
 	player,
 	enemy,
+};
+
+
+enum class AttackType
+{
+	Single,
+	Whole,
 };
 
 class Character
@@ -58,19 +66,21 @@ public:
 		//	死亡判定
 		if (m_status.hp <= 0)
 		{
+			m_status.hp = 0;
 			std::cout << m_status.name << "はしぼうした" << std::endl;
 
-			m_isDead = false;
+			m_isDead = true;
 		}
 	}
 
 	//	殴る
-	int Attack()const
+	int Attack(std::vector<Character*> a_character)
 	{
-		if (m_status.attack > 0)
+
+		std::cout << m_status.name << "の" << "こうげき！" << std::endl;
+		for (auto& character : a_character)
 		{
-			std::cout << m_status.name << "の" << "こうげき！" << std::endl;
-			return m_status.attack;
+			character->Damage(m_status.attack);
 		}
 
 		return 0;
@@ -84,12 +94,17 @@ public:
 			return;
 		}
 
-		std::cout <<  m_status.name <<"の回復:" << heal << std::endl;
-		m_status.hp += heal;
+		std::cout <<  m_status.name <<"の回復:" << m_status.heal << std::endl;
+		m_status.hp += m_status.heal;
 
 	}
 
 	bool IsDead()const { return m_isDead; }
+
+	std::string GetName()const
+	{
+		return m_status.name;
+	}
 
 protected:
 	/// <summary>
@@ -104,6 +119,8 @@ protected:
 
 	//	自分が何番のIDかどうか
 	size_t m_id = -1;
+
+	AttackType m_attackType = AttackType::Single;
 
 	/// <summary>
 	/// 生存フラグ

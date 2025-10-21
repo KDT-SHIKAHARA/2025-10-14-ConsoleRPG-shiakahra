@@ -19,8 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\BattleManager.cpp" />
     <ClCompile Include="source\CharacterManager.cpp" />
     <ClCompile Include="source\GameManager.cpp" />
+    <ClCompile Include="source\GameOver.cpp" />
     <ClCompile Include="source\InGameScene.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\SceneManager.cpp" />
@@ -28,12 +30,14 @@
   <ItemGroup>
     <ClInclude Include="source\base_Character.h" />
     <ClInclude Include="source\base_Scene.h" />
+    <ClInclude Include="source\BattleManager.h" />
     <ClInclude Include="source\CharacterManager.h" />
     <ClInclude Include="source\Debug.h" />
     <ClInclude Include="source\GameManager.h" />
     <ClInclude Include="source\InGameScene.h" />
     <ClInclude Include="source\Input.h" />
     <ClInclude Include="source\ObjectPool.h" />
+    <ClInclude Include="source\GameOver.h" />
     <ClInclude Include="source\SceneManager.h" />
     <ClInclude Include="source\Singleton.h" />
     <ClInclude Include="source\TitleScene.h" />

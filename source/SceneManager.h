@@ -46,8 +46,6 @@ inline void SceneManager::CreateSceneRequest()
 	}
 
 	//	次のスクリーンのインスタンス生成
-	m_nextScene = std::unique_ptr<T>();
-
-	//	ゲームオブジェクトの管理のクリアを読んで前回のインスタンスを返却する。
+	m_nextScene = std::make_unique<T>();
 
 }

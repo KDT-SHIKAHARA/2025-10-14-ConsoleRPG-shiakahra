@@ -5,9 +5,9 @@ CharacterManager::CharacterManager(size_t pool_capacity, bool pool_allowDynamic)
 	:m_characters(pool_capacity, pool_allowDynamic)
 {
 	m_defaultStatus.emplace(-1, CharacterStatus{});
-	m_defaultStatus.emplace(1, CharacterStatus{ "yusya",100,10 });
-	m_defaultStatus.emplace(2, CharacterStatus{ "dorei",200,4 });
-	m_defaultStatus.emplace(3, CharacterStatus{ "dragon",1000,20 });
+	m_defaultStatus.emplace(1, CharacterStatus{ "‚ä‚¤‚µ‚á",100,50,50 });
+	m_defaultStatus.emplace(2, CharacterStatus{ "‚Ç‚ê‚¢",200,20,100 });
+	m_defaultStatus.emplace(3, CharacterStatus{ "ƒhƒ‰ƒSƒ“",500,40 });
 
 }
 
@@ -44,7 +44,6 @@ std::vector<size_t> CharacterManager::GetIndexsForTag(CharacterTag tag)
 
 
 
-
 size_t CharacterManager::CreateEntity(size_t statusID, CharacterTag tag)
 {
 	std::cout << m_defaultStatus.size() << std::endl;
@@ -64,6 +63,35 @@ size_t CharacterManager::CreateEntity(size_t statusID, CharacterTag tag)
 
 
 	return size_t();
+}
+
+std::vector<Character*> CharacterManager::GetEnableObjectForTag(CharacterTag tag)
+{
+	auto indexs = m_tagIndexs.find(tag);
+	if (indexs == m_tagIndexs.end())
+	{
+		return std::vector<Character*>();
+	}
+
+
+	std::vector<Character*> result;
+
+	for (auto& index : indexs->second)
+	{
+		auto it = m_handles.find(index);
+		if (it != m_handles.end())
+		{
+			if (it->second->IsDead() == false)
+			{
+				result.push_back(it->second.GetObj());
+			}
+		}
+	}
+
+	return result;
+
+
+
 }
 
 void CharacterManager::Render()

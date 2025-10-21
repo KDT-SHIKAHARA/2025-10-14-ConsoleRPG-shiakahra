@@ -40,6 +40,9 @@
     <Filter Include="source\Game\Base">
       <UniqueIdentifier>{a3dadb91-7b63-414a-b7bc-0909730d5e41}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\Game\battle">
+      <UniqueIdentifier>{0f857927-f1fb-44b0-9c64-4d11aaf6809b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -55,6 +58,12 @@
       <Filter>source\Core\Scene</Filter>
     </ClCompile>
     <ClCompile Include="source\CharacterManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BattleManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GameOver.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -91,6 +100,12 @@
     </ClInclude>
     <ClInclude Include="source\Input.h">
       <Filter>source\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="source\BattleManager.h">
+      <Filter>source\Game\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GameOver.h">
+      <Filter>source\Core\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
