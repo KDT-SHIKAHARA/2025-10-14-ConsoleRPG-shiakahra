@@ -1,7 +1,7 @@
 #pragma once
 #include<string>
 #include<iostream>
-
+#include "BattleView.h"
 
 //	ステータス
 struct CharacterStatus
@@ -45,7 +45,9 @@ public:
 	};
 	virtual void Draw() 
 	{
-		std::cout << m_status.name << " | 体力: " << std::to_string(m_status.hp) << std::endl;
+		//
+		//std::cout << m_status.name << " | 体力: " << std::to_string(m_status.hp) << std::endl;
+		BattleView::Instance().StatusMSG(m_status.name,m_status.hp);
 	};
 
 	//	殴られる
@@ -61,15 +63,19 @@ public:
 		auto damage = attack;
 		m_status.hp -= damage;
 
-		//	
-		std::cout << m_status.name << "に " << damage << "の ダメージ！" << std::endl
-			<< hp << " -> " << m_status.hp << std::endl;
+		// //	
+		//std::cout << m_status.name << "に " << damage << "の ダメージ！" << std::endl
+		//	<< hp << " -> " << m_status.hp << std::endl;
+		BattleView::Instance().DamageMSG(m_status.name, damage, hp, m_status.hp);
 
 		//	死亡判定
 		if (m_status.hp <= 0)
 		{
 			m_status.hp = 0;
-			std::cout << m_status.name << "はしぼうした" << std::endl;
+			
+			// 
+			//std::cout << m_status.name << "はしぼうした" << std::endl;
+			BattleView::Instance().DeadMSG(m_status.name);
 
 			m_isDead = true;
 		}
@@ -79,7 +85,10 @@ public:
 	int Attack(std::vector<Character*> a_character)
 	{
 
-		std::cout << m_status.name << "の" << "こうげき！" << std::endl;
+		// 
+		//std::cout << m_status.name << "の" << "こうげき！" << std::endl;
+		BattleView::Instance().AttackMSG(m_status.name);
+
 		for (auto& character : a_character)
 		{
 			character->Damage(m_status.attack);
@@ -96,7 +105,9 @@ public:
 			return;
 		}
 
-		std::cout <<  m_status.name <<"の回復:" << m_status.heal << std::endl;
+		// 
+		//std::cout <<  m_status.name <<"の回復:" << m_status.heal << std::endl;
+		BattleView::Instance().HealMSG(m_status.name, m_status.heal);
 		m_status.hp += m_status.heal;
 
 	}
@@ -109,6 +120,7 @@ public:
 	}
 
 protected:
+
 	/// <summary>
 	/// キャラごとのステータスの構造体
 	/// </summary>

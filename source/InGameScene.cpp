@@ -3,6 +3,7 @@
 #include "GameOver.h"
 #include"SceneManager.h"
 #include"GameClear.h"
+#include "OthersView.h"
 
 #include<iostream>
 
@@ -10,7 +11,9 @@ InGameScene::InGameScene()
 	:m_battle(&m_characters)
 {
 
-	std::cout << "InGame‰Šú‰»" << std::endl;
+	//std::cout << "InGame‰Šú‰»" << std::endl;
+	OthersView::Instance().IngameInitMSG();
+	// ¶¬
 	m_characters.CreateEntity(1, CharacterTag::player);
 	m_characters.CreateEntity(2, CharacterTag::player);
 	m_characters.CreateEntity(3, CharacterTag::enemy);
@@ -28,6 +31,8 @@ void InGameScene::Update()
 
 	auto alivePlayers = m_characters.GetEnableObjectForTag(CharacterTag::player);
 	auto aliveEnenys = m_characters.GetEnableObjectForTag(CharacterTag::enemy);
+
+	// Ÿ”s”»’è
 	if (alivePlayers.empty() == true)
 	{
 		SceneManager::Instance().CreateSceneRequest<GameOver>();
@@ -41,7 +46,8 @@ void InGameScene::Update()
 
 void InGameScene::Render()
 {
-	std::cout << "============================================================" << std::endl;
+	//std::cout << "============================================================" << std::endl;
+	OthersView::Instance().RodView();
 
 #if _DEBUG
 	//std::cout << "InGame" << std::endl;

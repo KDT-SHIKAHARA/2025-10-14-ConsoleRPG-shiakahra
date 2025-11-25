@@ -4,6 +4,7 @@
 CharacterManager::CharacterManager(size_t pool_capacity, bool pool_allowDynamic)
 	:m_characters(pool_capacity, pool_allowDynamic)
 {
+	// マジックナンバー
 	m_defaultStatus.emplace(-1, CharacterStatus{});
 	m_defaultStatus.emplace(1, CharacterStatus{ "ゆうしゃ",100,50,50 });
 	m_defaultStatus.emplace(2, CharacterStatus{ "どれい", 200,20,100 });

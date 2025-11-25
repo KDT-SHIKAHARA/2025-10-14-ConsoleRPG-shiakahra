@@ -32,6 +32,7 @@
     <ClInclude Include="source\base_Character.h" />
     <ClInclude Include="source\base_Scene.h" />
     <ClInclude Include="source\BattleManager.h" />
+    <ClInclude Include="source\BattleView.h" />
     <ClInclude Include="source\CharacterManager.h" />
     <ClInclude Include="source\Debug.h" />
     <ClInclude Include="source\GameClear.h" />
@@ -40,9 +41,11 @@
     <ClInclude Include="source\Input.h" />
     <ClInclude Include="source\ObjectPool.h" />
     <ClInclude Include="source\GameOver.h" />
+    <ClInclude Include="source\OthersView.h" />
     <ClInclude Include="source\SceneManager.h" />
     <ClInclude Include="source\Singleton.h" />
     <ClInclude Include="source\TitleScene.h" />
+    <ClInclude Include="source\ResultView.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

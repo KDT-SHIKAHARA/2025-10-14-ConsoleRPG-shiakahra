@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include "Input.h"
+#include "BattleView.h"
 
 BattleManager::BattleManager(CharacterManager* a_characters)
 	:m_characters(a_characters)
@@ -10,9 +11,12 @@ BattleManager::BattleManager(CharacterManager* a_characters)
 
 void BattleManager::Start()
 {
-	std::cout << std::endl;
-	std::cout << "‚ ‚È‚½‚Ìƒ^[ƒ“" << std::endl;
-	std::cout << "1: UŒ‚   2: ‰ñ•œ" << std::endl;
+	// 
+	//std::cout << std::endl;
+	//std::cout << "‚ ‚È‚½‚Ìƒ^[ƒ“" << std::endl;
+	//std::cout << "1: UŒ‚   2: ‰ñ•œ" << std::endl;
+	BattleView::Instance().ActionMSG();
+
 	auto players = m_characters->GetEnableObjectForTag(CharacterTag::player);
 	auto enemys = m_characters->GetEnableObjectForTag(CharacterTag::enemy);
 

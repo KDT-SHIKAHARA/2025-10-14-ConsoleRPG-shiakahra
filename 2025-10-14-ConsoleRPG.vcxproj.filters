@@ -43,6 +43,9 @@
     <Filter Include="source\Game\battle">
       <UniqueIdentifier>{0f857927-f1fb-44b0-9c64-4d11aaf6809b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\View">
+      <UniqueIdentifier>{f9ed7e50-1642-4fb4-b11a-e19191c01454}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -112,6 +115,15 @@
     </ClInclude>
     <ClInclude Include="source\GameClear.h">
       <Filter>source\Core\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ResultView.h">
+      <Filter>source\View</Filter>
+    </ClInclude>
+    <ClInclude Include="source\BattleView.h">
+      <Filter>source\View</Filter>
+    </ClInclude>
+    <ClInclude Include="source\OthersView.h">
+      <Filter>source\View</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
